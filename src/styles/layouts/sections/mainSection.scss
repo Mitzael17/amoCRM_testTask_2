@@ -1,0 +1,46 @@
+@import './src/styles/rest/mixins';
+@import './src/styles/rest/vars';
+@import './src/styles/rest/functions';
+
+
+.mainSection {
+
+
+  &__block {
+
+  }
+
+  &__subtitle {
+    @include useSecondFont();
+    font-size: em(18, 16);
+    margin: em(15, 18) 0 em(45, 18);
+  }
+
+  &__button {
+
+  }
+
+}
+
+.features {
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: em(20, 16);
+    gap: em(14, 16) em(10, 16);
+  }
+
+  &__item {
+
+  }
+
+  &__title {
+
+  }
+
+  &__text {
+
+  }
+
+}

@@ -2,10 +2,10 @@ import React from 'react';
 import classes from "./Logo.module.scss";
 import logo from "../../assets/logo.png";
 
-const Logo = () => {
+const Logo = ({className = ''}) => {
 
     return (
-        <div>
+        <div className={`${className} ${classes.logoContainer}`}>
             <a href="/" className={classes.logo}>
                 <img src={logo} alt="Welbex" />
             </a>

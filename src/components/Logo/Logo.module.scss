@@ -1,6 +1,14 @@
-.logo {
+@import "./src/styles/rest/functions";
+@import "./src/styles/rest/mixins";
+
+.logoContainer {
+  max-width: 140px;
 }
 
 .subtitle {
-
+  @include useSecondFont();
+  font-weight: 300;
+  font-size: em(10, 16);
+  line-height: lh(12.2, 10);
+  margin-top: 6px;
 }

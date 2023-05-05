@@ -9,10 +9,12 @@
 
 // Layouts styles
 @import "layouts/header";
-
+@import "layouts/content";
+@import "layouts/sections/mainSection";
 
 
 body {
+  line-height: 1.22;
   display: flex;
   font-family: 'Inter', sans-serif;
   flex-direction: column;
@@ -22,7 +24,7 @@ body {
 
 
 .container {
-  max-width: 1440px;
+  max-width: 1170px;
   padding: 0 15px;
   margin: 0 auto;
 }
@@ -34,3 +36,14 @@ body {
   height: em(20, 16);
 }
 
+
+h2 {
+  font-size: em(36, 16);
+  line-height: lh(44, 36);
+  font-weight: 400;
+}
+
+h3 {
+  font-size: em(18, 16);
+  font-weight: 500;
+}

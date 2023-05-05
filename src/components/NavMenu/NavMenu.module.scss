@@ -1,3 +1,28 @@
+@import "./src/styles/rest/vars";
+@import "./src/styles/rest/functions";
+
 .menu {
   display: flex;
+  gap: em(16, 12);
+  font-size: em(12, 16);
+  text-transform: uppercase;
+  flex-wrap: wrap;
+  font-weight: 500;
+  line-height: lh(15, 12);
+  justify-content: center;
+
+  @media screen and (min-width: $headerFirstMedia) {
+    font-size: 1em;
+    text-transform: initial;
+    gap: 31px;
+  }
+}
+
+.hideOnMobile {
+  display: none;
+
+  @media screen and (min-width: $mobileMedia) {
+    display: block;
+  }
+
 }

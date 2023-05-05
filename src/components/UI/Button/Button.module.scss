@@ -1,0 +1,21 @@
+@import "./src/styles/rest/functions";
+@import "./src/styles/rest/vars";
+
+.button {
+  font-weight: 500;
+  line-height: lh(19, 16);
+  background: #4077F3;
+  color: $color;
+  padding: em(21, 16) em(35, 16);
+  transition: .5s all;
+
+  &:active,
+  &:hover {
+    background: rgba(64, 119, 243, 0.7);
+  }
+
+  &:active {
+    transform: scale(.95);
+  }
+
+}

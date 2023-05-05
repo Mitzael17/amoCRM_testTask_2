@@ -1,1 +1,5 @@
 @import "vars.scss";
+
+@mixin useSecondFont() {
+  font-family: 'Montserrat', sans-serif;
+}

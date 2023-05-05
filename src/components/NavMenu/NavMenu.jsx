@@ -18,7 +18,7 @@ const NavMenu = () => {
                 <li>
                     <a href="#">Кейсы</a>
                 </li>
-                <li>
+                <li className={classes.hideOnMobile}>
                     <a href="#">Сертификаты</a>
                 </li>
             </ul>

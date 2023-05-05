@@ -8,7 +8,9 @@ const Contacts = ({className = ''}) => {
 
     return (
         <div className={`${className} ${classes.contacts}`}>
-            <a className={className.tel} href="tel:+75555555555">+7 555 555-55-55</a>
+            <div>
+                <a className={className.tel} href="tel:+75555555555">+7 555 555-55-55</a>
+            </div>
             <div className={classes.socials}>
                 <a href="#" target='_blank' className={classes.socialItem}>
                     <TelegramIcon />
