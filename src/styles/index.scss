@@ -1,0 +1,36 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Montserrat:wght@300;400&display=swap');
+
+// Rest styles import
+@import "rest/reset";
+@import "rest/functions";
+@import "rest/mixins";
+@import "rest/vars";
+
+// Layouts styles
+@import "layouts/header";
+
+
+
+body {
+  display: flex;
+  font-family: 'Inter', sans-serif;
+  flex-direction: column;
+  background: $backgroundColor;
+  color: $color;
+}
+
+
+.container {
+  max-width: 1440px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+
+.icons {
+  fill: $color;
+  width: em(20, 16);
+  height: em(20, 16);
+}
+
