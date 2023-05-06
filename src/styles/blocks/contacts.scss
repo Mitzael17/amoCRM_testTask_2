@@ -1,0 +1,23 @@
+@import "../rest/functions";
+
+.contacts {
+  display: flex;
+  gap: rem(47);
+
+  &__socials {
+    display: flex;
+    gap: rem(30);
+  }
+
+  &__socialItem {
+    width: em(20, 16);
+    height: em(20, 16);
+
+    svg {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+  }
+
+}

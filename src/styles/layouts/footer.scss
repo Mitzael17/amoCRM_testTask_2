@@ -1,0 +1,156 @@
+@import "../rest/vars";
+@import "../rest/functions";
+@import "../rest/mixins";
+
+footer {
+  margin-top: auto;
+  padding: em(41, 16) 0 em(65, 16);
+}
+
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: em(30, 16);
+  align-items: center;
+
+
+  &__info {
+
+    @media screen and (min-width: $footerMedia) {
+      margin-left: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      text-align: right;
+    }
+
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: em(30, 16);
+
+    @media screen and (min-width: $footerMedia) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    @media screen and (min-width: 1100px) {
+      gap: 12px 100px;
+    }
+
+  }
+
+  &__lists {
+    display: flex;
+    gap: 43px;
+
+    @media screen and (min-width: $footerMedia) {
+      gap: 50px;
+    }
+
+  }
+
+  &__list {
+
+    display: flex;
+    flex-direction: column;
+    gap: em(10, 16);
+
+
+  }
+
+  &__title {
+    color: #656566;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: .05em;
+    font-size: em(12, 16);
+    margin-bottom: em(20, 12);
+
+    @media screen and (min-width: $footerMedia) {
+      font-size: em(14, 16);
+      margin-bottom: em(20, 14);
+    }
+
+  }
+
+  &__link {
+    font-size: em(14, 16);
+    display: block;
+    line-height: 1.21;
+
+    @media screen and (min-width: $footerMedia) {
+      font-size: 1em;
+    }
+
+    &.firstOnMobile {
+      order: -1;
+
+      @media screen and (min-width: $footerMedia) {
+        order: initial;
+      }
+
+    }
+
+  }
+
+  &__address {
+    font-size: em(14, 16);
+
+    @media screen and (min-width: $footerMedia) {
+      font-size: 1em;
+    }
+
+  }
+
+  .contacts {
+    flex-direction: column;
+    gap: .5em;
+    margin-bottom: em(10, 16);
+
+    @media screen and (min-width: $footerMedia) {
+      gap: em(19, 16);
+      margin-bottom: em(20, 16);
+    }
+
+    &__socials {
+      gap: em(10, 16);
+
+      @media screen and (min-width: $footerMedia) {
+        justify-content: flex-end;
+        gap: em(4, 16);
+      }
+    }
+
+    &__socialItem {
+      width: em(24, 16);
+      height: em(24, 16);
+
+      @media screen and (min-width: $footerMedia) {
+        width: em(20m, 16);
+        height: em(20, 16);
+      }
+    }
+  }
+
+  &__copyright {
+    margin-top: em(20, 12);
+    font-size: em(12, 16);
+    @include useSecondFont();
+
+    .link {
+      margin-top: em(5, 12);
+    }
+
+    @media screen and (min-width: $footerMedia) {
+      width: 100%;
+      text-align: right;
+    }
+
+  }
+
+}

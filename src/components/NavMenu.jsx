@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from "./NavMenu.module.scss";
+import classes from "../styles/modules/NavMenu.module.scss";
 
 const NavMenu = () => {
 
@@ -7,19 +7,19 @@ const NavMenu = () => {
         <nav>
             <ul className={classes.menu}>
                 <li>
-                    <a href="#">Услуги</a>
+                    <a href="NavMenu#">Услуги</a>
                 </li>
                 <li>
-                    <a href="#">Виджеты</a>
+                    <a href="NavMenu#">Виджеты</a>
                 </li>
                 <li>
-                    <a href="#">Интеграции</a>
+                    <a href="NavMenu#">Интеграции</a>
                 </li>
                 <li>
-                    <a href="#">Кейсы</a>
+                    <a href="NavMenu#">Кейсы</a>
                 </li>
                 <li className='hideOnMobile'>
-                    <a href="#">Сертификаты</a>
+                    <a href="NavMenu#">Сертификаты</a>
                 </li>
             </ul>
         </nav>

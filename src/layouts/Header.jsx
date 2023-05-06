@@ -1,7 +1,7 @@
 import React, {useEffect, useRef, useState} from 'react';
-import Logo from "../components/Logo/Logo.jsx";
-import NavMenu from "../components/NavMenu/NavMenu.jsx";
-import Contacts from "../components/Contacts/Contacts.jsx";
+import Logo from "../components/Logo.jsx";
+import NavMenu from "../components/NavMenu.jsx";
+import Contacts from "../components/Contacts.jsx";
 
 const Header = () => {
 

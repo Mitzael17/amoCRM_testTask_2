@@ -7,26 +7,35 @@
 @import "rest/mixins";
 @import "rest/vars";
 
+// Block styles
+@import "blocks/contacts";
+
 // Layouts styles
 @import "layouts/header";
+@import "layouts/footer";
 @import "layouts/sections/mainSection";
 
 
 body {
   line-height: 1.22;
-  display: flex;
   @include useFirstFont();
-  flex-direction: column;
   background: $backgroundColor;
   color: $color;
+  font-weight: 400;
 }
 
 
+#root {
+  min-height: calc(var(--vh, 1vh) * 100);
+  display: flex;
+  flex-direction: column;
+}
+
 main {
-  margin: 40px 0 50px;
+  padding: 40px 0 59px;
 
   @media screen and (min-width: $tabletMedia) {
-    margin: 90px 0 69px;
+    padding: 90px 0 83px;
   }
 }
 
@@ -40,8 +49,9 @@ main {
 
 .icons {
   fill: $color;
-  width: em(20, 16);
-  height: em(20, 16);
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 
@@ -118,5 +128,11 @@ h3 {
     font-weight: $font;
   }
 
+}
+
+
+.link {
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
 }
 
