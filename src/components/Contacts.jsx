@@ -1,5 +1,4 @@
 import React from 'react';
-import classes from "../styles/modules/Contacts.module.scss"
 import TelegramIcon from "./Icons/TelegramIcon.jsx";
 import ViberIcon from "./Icons/ViberIcon.jsx";
 import WhatsappIcon from "./Icons/WhatsappIcon.jsx";
@@ -8,7 +7,7 @@ const Contacts = ({className = ''}) => {
 
     return (
         <div className={`${className} contacts`}>
-            <div>
+            <div className='contacts__tel'>
                 <a className={className.tel} href="tel:+75555555555">+7 555 555-55-55</a>
             </div>
             <div className='contacts__socials'>

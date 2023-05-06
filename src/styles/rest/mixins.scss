@@ -21,3 +21,16 @@
   left: $x;
   top: $y;
 }
+
+@mixin createBackgroundBall($diameter, $shadowColor, $background) {
+  width: $diameter;
+  height: $diameter;
+  background: $background;
+  box-shadow: 3px 6px 27px -10px $shadowColor;
+}
+
+@mixin createBackgroundLightBall($diameter, $background) {
+  width: $diameter;
+  height: $diameter;
+  background: $background;
+}

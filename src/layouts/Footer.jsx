@@ -43,7 +43,7 @@ const Footer = () => {
                         </div>
                         <div className="footer__copyright">
                             <div>©WELBEX 2022. Все права защищены.</div>
-                            <div className="link">Политика конфиденциальности</div>
+                            <a href='#' className="link">Политика конфиденциальности</a>
                         </div>
                     </div>
                 </div>

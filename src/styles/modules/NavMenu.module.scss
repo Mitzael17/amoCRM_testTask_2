@@ -11,6 +11,14 @@
   line-height: lh(15, 12);
   justify-content: center;
 
+  a {
+    transition: .3s all;
+
+    &:hover {
+      color: $hoverColor;
+    }
+  }
+
   @media screen and (min-width: $headerFirstMedia) {
     font-size: 1em;
     text-transform: initial;

@@ -1,0 +1,133 @@
+@import "../rest/functions";
+@import "../rest/mixins";
+
+.background {
+  @include useAbsolutePosition();
+  z-index: -1;
+  width: 100%;
+  pointer-events: none;
+  height: 100%;
+
+  &:before {
+    content: '';
+    @include useAbsolutePosition(0, -40px);
+    width: 100%;
+    height: calc(100% + 99px);
+    background: radial-gradient(238.53% 189.02% at 3.2% 3.49%, rgba(255, 246, 233, 0.1) 0%, rgba(26, 29, 35, 0.1) 26.62%, rgba(26, 29, 35, 0.1) 52.1%, rgba(26, 29, 35, 0.01) 70.17%, rgba(26, 29, 35, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    backdrop-filter: blur(7.5px);
+    z-index: 1;
+
+    @media screen and (min-width: $mobileMedia) {
+      display: none;
+    }
+
+  }
+
+}
+
+.ball {
+  backdrop-filter: blur(2px);
+  border-radius: 50%;
+  position: absolute;
+
+  &.purple {
+    @include createBackgroundBall(
+                    40px,
+                    rgba(177, 118, 217, 0.25),
+                    radial-gradient(64% 64% at 27.25% 26.5%, rgba(236, 208, 255, 0.64) 0%, rgba(161, 93, 207, 0.24) 59.67%, rgba(118, 49, 164, 0.208) 78.59%, rgba(86, 24, 128, 0.232) 100%)
+    );
+    filter: blur(5px);
+    left: 94%;
+    top: 57%;
+
+    @media screen and (min-width: $mobileMedia) {
+      left: 60.5%;
+      top: -55%;
+      width: 60px;
+      height: 60px;
+    }
+
+  }
+
+  &.red {
+    @include createBackgroundBall(
+                    43px,
+                    rgba(223, 125, 125, 0.25),
+                    radial-gradient(64% 64% at 27.25% 26.5%, rgba(255, 208, 208, 0.536) 0%, rgba(212, 93, 93, 0.264) 59.67%, rgba(167, 49, 49, 0.248) 78.59%, rgba(130, 25, 25, 0.248) 100%)
+    );
+    left: 10%;
+    top: 105%;
+
+    @media screen and (min-width: $mobileMedia) {
+      top: -33%;
+      left: 36%;
+      width: 83px;
+      height: 83px;
+    }
+
+  }
+
+  &.smallBrown {
+
+    @include createBackgroundBall(
+                    28px,
+                    rgba(223, 125, 125, 0.25),
+                    radial-gradient(64% 64% at 27.25% 26.5%, rgba(255, 208, 208, 0.48) 0%, rgba(212, 93, 93, 0.248) 59.67%, rgba(167, 49, 49, 0.264) 78.59%, rgba(130, 25, 25, 0.232) 100%)
+    );
+    filter: blur(2.5px);
+    left: 80%;
+    top: 140%;
+
+    @media screen and (min-width: $mobileMedia) {
+      top: 88%;
+      left: 59%;
+    }
+
+  }
+
+}
+
+
+.lightBall {
+  border-radius: 50%;
+  filter: blur(196px);
+  opacity: .5;
+  position: absolute;
+
+  &.red {
+    @include createBackgroundLightBall(211px, #961A1A);
+    top: 58%;
+    left: -16%;
+
+    @media screen and (min-width: $mobileMedia) {
+      left: -7%;
+      top: 9%;
+      width: 311px;
+      height: 311px;
+    }
+
+  }
+
+  &.purple {
+    @include createBackgroundLightBall(259px, #833AB4);
+    top: 23%;
+    left: 78%;
+
+    @media screen and (min-width: $mobileMedia) {
+      left: 42%;
+      top: -94%;
+    }
+  }
+
+  &.yellow {
+    @include createBackgroundLightBall(200px, #FCB045);
+    left: -16%;
+    top: 140%;
+
+    @media screen and (min-width: $mobileMedia) {
+      display: none;
+    }
+
+  }
+
+}

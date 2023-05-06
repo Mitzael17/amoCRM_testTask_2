@@ -2,13 +2,14 @@ import React, {useContext} from 'react';
 import {featuresData} from "../../data/featuresData.js";
 import Button from "../../components/UI/Buttons/Button.jsx";
 import {ModeContext} from "../../contexts/ModeContext.js";
+import Background from "../../components/Background.jsx";
 
 const MainSection = () => {
 
     const currentMode = useContext(ModeContext);
 
     return (
-        <section>
+        <section className='relative'>
             <div className="container">
                 <div className="mainSection">
                     <div className="mainSection__block">
@@ -39,6 +40,7 @@ const MainSection = () => {
                     </div>
                 </div>
             </div>
+            <Background />
         </section>
     );
 };

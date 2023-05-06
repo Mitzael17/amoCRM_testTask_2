@@ -5,6 +5,11 @@
 footer {
   margin-top: auto;
   padding: em(41, 16) 0 em(65, 16);
+
+  @media screen and (min-width: $tabletMedia) {
+    padding-bottom: em(20, 16);
+  }
+
 }
 
 
@@ -83,6 +88,16 @@ footer {
     display: block;
     line-height: 1.21;
 
+    a {
+      transition: .3s all;
+
+      &:hover {
+        color: $hoverColor;
+      }
+    }
+
+
+
     @media screen and (min-width: $footerMedia) {
       font-size: 1em;
     }
@@ -141,10 +156,9 @@ footer {
     margin-top: em(20, 12);
     font-size: em(12, 16);
     @include useSecondFont();
-
-    .link {
-      margin-top: em(5, 12);
-    }
+    display: flex;
+    flex-direction: column;
+    gap: em(5, 12);
 
     @media screen and (min-width: $footerMedia) {
       width: 100%;

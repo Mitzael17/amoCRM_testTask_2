@@ -4,6 +4,16 @@
   display: flex;
   gap: rem(47);
 
+  &__tel {
+    a {
+      transition: .3s all;
+
+      &:hover {
+        color: $hoverColor;
+      }
+    }
+  }
+
   &__socials {
     display: flex;
     gap: rem(30);
