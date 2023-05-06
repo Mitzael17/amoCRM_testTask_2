@@ -1,5 +1,23 @@
 @import "vars.scss";
 
+@mixin useFirstFont() {
+  font-family: 'Inter', sans-serif;
+}
+
 @mixin useSecondFont() {
   font-family: 'Montserrat', sans-serif;
+}
+
+@mixin useGradientText($background: $gradientColorfulTextBackground) {
+  background: $background;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+@mixin useAbsolutePosition($x: 0, $y: 0) {
+  position: absolute;
+  left: $x;
+  top: $y;
 }

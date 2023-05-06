@@ -17,12 +17,3 @@
     gap: 31px;
   }
 }
-
-.hideOnMobile {
-  display: none;
-
-  @media screen and (min-width: $mobileMedia) {
-    display: block;
-  }
-
-}

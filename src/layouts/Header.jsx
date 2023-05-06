@@ -25,10 +25,10 @@ const Header = () => {
     useEffect(() => {
         
         if(isFixed) {
-            
+
             headerRef.current.style.height = headerRef.current.offsetHeight + 'px';
             headerContainerRef.current.classList.add('fixed')
-            
+
             return;
             
         }
@@ -53,7 +53,7 @@ const Header = () => {
     
     function handlerWindowResize() {
 
-        // Избегаем лишнего рендера при изменение высоты
+        // Избегаем лишнего рендера при изменении высоты
         if(prevWidth.current === window.innerWidth) return;
 
         prevWidth.current = window.innerWidth;

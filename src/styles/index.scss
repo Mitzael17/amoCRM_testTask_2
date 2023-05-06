@@ -9,17 +9,25 @@
 
 // Layouts styles
 @import "layouts/header";
-@import "layouts/content";
 @import "layouts/sections/mainSection";
 
 
 body {
   line-height: 1.22;
   display: flex;
-  font-family: 'Inter', sans-serif;
+  @include useFirstFont();
   flex-direction: column;
   background: $backgroundColor;
   color: $color;
+}
+
+
+main {
+  margin: 40px 0 50px;
+
+  @media screen and (min-width: $tabletMedia) {
+    margin: 90px 0 69px;
+  }
 }
 
 
@@ -40,10 +48,75 @@ body {
 h2 {
   font-size: em(36, 16);
   line-height: lh(44, 36);
-  font-weight: 400;
+  font-weight: 900;
+
+  @media screen and (min-width: $tabletMedia) {
+    font-size: em(48, 16);
+    line-height: lh(58, 48);
+  }
+
 }
 
 h3 {
   font-size: em(18, 16);
-  font-weight: 500;
+  font-weight: 700;
+
+  @media screen and (min-width: $tabletMedia) {
+    letter-spacing: .05em;
+    text-transform: uppercase;
+
+    .no-gradient-text {
+      text-transform: initial;
+      letter-spacing: initial;
+    }
+  }
 }
+
+
+.hideOnMobile {
+  display: none;
+
+  @media screen and (min-width: $mobileMediaNumber + 1 + px) {
+    display: block;
+  }
+
+}
+
+
+.hideOnTablet {
+  display: none;
+
+  @media screen and (min-width: $tabletMedia) {
+    display: block;
+  }
+
+}
+
+
+.gradient-colorful-text {
+  @include useGradientText();
+}
+
+
+.gradient-gold-text {
+  @include useGradientText($gradientGoldTextBackground);
+}
+
+
+.no-gradient-text {
+  color: $color;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: initial;
+  background-clip: initial;
+  text-fill-color: initial;
+}
+
+
+@each $font in [400, 500] {
+
+  .font-#{$font} {
+    font-weight: $font;
+  }
+
+}
+
