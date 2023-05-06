@@ -1,9 +1,16 @@
-import React from 'react';
 import classes from "../../../styles/modules/UI/Buttons/Button.module.scss";
 
-const Button = ({children, className = '', ...props}) => {
+const Button = ({children, link, className = '', ...props}) => {
     return (
-        <button className={`${className} ${classes.button}`} {...props}>{children}</button>
+        <>
+            { link ?
+                <a href={link} className={`${className} ${classes.button}`} {...props}>{children}</a>
+                :
+                <button className={`${className} ${classes.button}`} {...props}>{children}</button>
+            }
+        </>
+
+
     );
 };
 

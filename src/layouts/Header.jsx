@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from 'react';
+import {useEffect, useRef, useState} from 'react';
 import Logo from "../components/Logo.jsx";
 import NavMenu from "../components/NavMenu.jsx";
 import Contacts from "../components/Contacts.jsx";
@@ -26,8 +26,15 @@ const Header = () => {
         
         if(isFixed) {
 
-            headerRef.current.style.height = headerRef.current.offsetHeight + 'px';
-            headerContainerRef.current.classList.add('fixed')
+            // Откладываем фиксацию, чтобы получить точную высоту.
+            setTimeout( () => {
+
+                headerRef.current.style.height = headerRef.current.offsetHeight + 'px';
+                headerContainerRef.current.classList.add('fixed')
+
+            }, 1000)
+
+
 
             return;
             

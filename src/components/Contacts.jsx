@@ -1,4 +1,3 @@
-import React from 'react';
 import TelegramIcon from "./Icons/TelegramIcon.jsx";
 import ViberIcon from "./Icons/ViberIcon.jsx";
 import WhatsappIcon from "./Icons/WhatsappIcon.jsx";

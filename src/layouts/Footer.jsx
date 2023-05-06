@@ -1,4 +1,4 @@
-import React, {useContext, useRef} from 'react';
+import {useContext, useRef} from 'react';
 import {footerLinks} from "../data/footerLinks.js";
 import Contacts from "../components/Contacts.jsx";
 import {ModeContext} from "../contexts/ModeContext.js";

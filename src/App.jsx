@@ -1,8 +1,9 @@
-import React, {useEffect} from 'react';
+import {useEffect} from 'react';
 import Header from "./layouts/Header.jsx";
 import Content from "./layouts/Content.jsx";
 import Footer from "./layouts/Footer.jsx";
 import ModeProvider from "./components/Providers/ModeProvider.jsx";
+import {MouseParallaxContainer} from "react-parallax-mouse";
 
 const App = () => {
 
@@ -26,9 +27,11 @@ const App = () => {
 
     return (
         <ModeProvider>
-            <Header />
-            <Content />
-            <Footer />
+            <MouseParallaxContainer className='page'>
+                <Header />
+                <Content />
+                <Footer />
+            </MouseParallaxContainer>
         </ModeProvider>
     );
 };

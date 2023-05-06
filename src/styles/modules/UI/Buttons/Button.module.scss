@@ -8,6 +8,9 @@
   color: $color;
   padding: em(21, 16) em(35, 16);
   transition: .5s all;
+  display: block;
+  width: fit-content;
+  text-align: center;
 
   &:active,
   &:hover {

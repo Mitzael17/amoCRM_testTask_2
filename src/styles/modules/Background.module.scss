@@ -2,11 +2,13 @@
 @import "../rest/mixins";
 
 .background {
-  @include useAbsolutePosition();
+  @include useAbsolutePosition(50%);
   z-index: -1;
   width: 100%;
   pointer-events: none;
   height: 100%;
+  max-width: 1440px;
+  transform: translateX(-50%);
 
   &:before {
     content: '';
@@ -26,7 +28,6 @@
 }
 
 .ball {
-  backdrop-filter: blur(2px);
   border-radius: 50%;
   position: absolute;
 
@@ -90,9 +91,10 @@
 
 .lightBall {
   border-radius: 50%;
-  filter: blur(196px);
+  filter: blur(100px);
   opacity: .5;
   position: absolute;
+
 
   &.red {
     @include createBackgroundLightBall(211px, #961A1A);

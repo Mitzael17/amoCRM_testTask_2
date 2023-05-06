@@ -1,4 +1,3 @@
-import React from 'react';
 import MainSection from "./sections/MainSection.jsx";
 
 const Content = () => {

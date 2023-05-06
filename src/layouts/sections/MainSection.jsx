@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import {useContext} from 'react';
 import {featuresData} from "../../data/featuresData.js";
 import Button from "../../components/UI/Buttons/Button.jsx";
 import {ModeContext} from "../../contexts/ModeContext.js";
@@ -36,7 +36,7 @@ const MainSection = () => {
                                 ))}
                             </div>
                         </div>
-                        <Button className='mainSection__button hideOnTablet'>Получить консультацию</Button>
+                        <Button className='mainSection__button hideOnTablet' link='#'>Получить консультацию</Button>
                     </div>
                 </div>
             </div>
