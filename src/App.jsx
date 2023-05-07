@@ -9,14 +9,13 @@ const App = () => {
 
     useEffect(() => {
 
-        let vh = window.innerHeight * 0.01;
-        document.documentElement.style.setProperty('--vh', `${vh}px`);
-
         const handlerResize = () => {
-            let vh = window.innerHeight * 0.01;
+            const vh = window.innerHeight * 0.01;
             document.documentElement.style.setProperty('--vh', `${vh}px`);
         }
 
+        handlerResize();
+        
         window.addEventListener('resize', handlerResize);
 
         return () => {
